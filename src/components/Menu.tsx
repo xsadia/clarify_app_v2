@@ -10,8 +10,18 @@ import {
   IonNote,
 } from '@ionic/react';
 
+import {
+  bookmarkOutline,
+  logInOutline,
+  logInSharp,
+  homeOutline,
+  homeSharp,
+  statsChartOutline,
+  statsChartSharp,
+} from 'ionicons/icons';
+
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+
 import './Menu.css';
 
 interface AppPage {
@@ -25,14 +35,20 @@ const appPages: AppPage[] = [
   {
     title: 'home',
     url: '/',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    iosIcon: homeOutline,
+    mdIcon: homeSharp
   },
   {
     title: 'Login',
     url: '/login',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
+    iosIcon: logInOutline,
+    mdIcon: logInSharp
+  },
+  {
+    title: 'Dashboard',
+    url: '/dashboard',
+    iosIcon: statsChartOutline,
+    mdIcon: statsChartSharp
   }
 ];
 
@@ -64,7 +80,7 @@ const Menu: React.FC<Props> = ({email, firstName}) => {
           })}
         </IonList>
 
-        <IonList id="labels-list">
+        {/* <IonList id="labels-list">
           <IonListHeader>Labels</IonListHeader>
           {labels.map((label, index) => (
             <IonItem lines="none" key={index}>
@@ -72,7 +88,7 @@ const Menu: React.FC<Props> = ({email, firstName}) => {
               <IonLabel>{label}</IonLabel>
             </IonItem>
           ))}
-        </IonList>
+        </IonList> */}
       </IonContent>
     </IonMenu>
   );

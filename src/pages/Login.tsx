@@ -6,26 +6,28 @@ const Login: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [cnpj, setCnpj] = useState('');
-    const hash = '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'
+    /* const hash = '7110eda4d09e062aa5e4a390b0a572ac0d2c0220' */
 
-    const params = JSON.stringify({
+    /* const params = JSON.stringify({
         "mail": email,
         "pwd": password,
         "cnpj": cnpj,
-    });
+    }); */
 
     const handleClick = async () => {
-        const response = await api.post('empresa', params, {
+        /* const response = await api.post('empresa', params, {
             headers: {
                 "hash": hash
             },
-        })
+        }) */
+
+        
     }
 
     return (
         <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="secondary">
           <IonButtons slot="start"> 
             <IonMenuButton />
           </IonButtons>
@@ -80,7 +82,7 @@ const Login: React.FC = () => {
             </IonRow>
             <IonRow>
                 <IonCol>
-                    <IonButton expand="full" color="primary" onClick={handleClick} >Submit</IonButton>
+                    <IonButton expand="block" color="secondary" onClick={handleClick} >Submit</IonButton>
                 </IonCol>
             </IonRow>
         </IonGrid>

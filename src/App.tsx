@@ -25,6 +25,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { useState, useEffect } from 'react';
 import api from './services/api';
+import Dashboard from './pages/Dashboard';
 
 const App: React.FC = () => {
   const [firstName, setFirstName] = useState('');
@@ -50,6 +51,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/login" exact>
               <Login />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

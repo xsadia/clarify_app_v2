@@ -1,6 +1,5 @@
 import { IonButtons, IonContent, IonGrid, IonHeader, IonMenuButton, IonPage, IonRow, IonTitle, IonToolbar,IonCol } from '@ionic/react';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
 
 import api from '../services/api';
 import './Page.css';
@@ -14,7 +13,7 @@ const Page: React.FC = () => {
       setFirstName(res.data.first_name)
       console.log(res.data)
     })
-
+    console.log(firstName);
   },[])
 
 
@@ -22,7 +21,7 @@ const Page: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="secondary">
           <IonButtons slot="start"> 
             <IonMenuButton />
           </IonButtons>
@@ -39,7 +38,7 @@ const Page: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol>
-              <h1>Welcome {firstName}</h1>
+              <h1>TODO</h1>
             </IonCol>
           </IonRow>
         </IonGrid>
