@@ -1,0 +1,7 @@
+{
+  "name": "clarify_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
