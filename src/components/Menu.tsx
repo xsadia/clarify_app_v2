@@ -11,13 +11,12 @@ import {
 } from '@ionic/react';
 
 import {
-  bookmarkOutline,
   logInOutline,
   logInSharp,
-  homeOutline,
-  homeSharp,
   statsChartOutline,
   statsChartSharp,
+  pricetagsOutline,
+  pricetagsSharp
 } from 'ionicons/icons';
 
 import { useLocation } from 'react-router-dom';
@@ -31,13 +30,14 @@ interface AppPage {
   title: string;
 }
 
+/* {
+  title: 'home',
+  url: '/',
+  iosIcon: homeOutline,
+  mdIcon: homeSharp
+}, */
+
 const appPages: AppPage[] = [
-  {
-    title: 'home',
-    url: '/',
-    iosIcon: homeOutline,
-    mdIcon: homeSharp
-  },
   {
     title: 'Login',
     url: '/login',
@@ -49,6 +49,12 @@ const appPages: AppPage[] = [
     url: '/dashboard',
     iosIcon: statsChartOutline,
     mdIcon: statsChartSharp
+  },
+  {
+    title: 'Pedidos',
+    url: '/pedidos',
+    iosIcon: pricetagsOutline,
+    mdIcon: pricetagsSharp
   }
 ];
 
@@ -57,9 +63,7 @@ interface Props {
   firstName: string;
 }
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-
-const Menu: React.FC<Props> = ({email, firstName}) => {
+const Menu: React.FC<Props> = ({email}) => {
   const location = useLocation();
 
   return (

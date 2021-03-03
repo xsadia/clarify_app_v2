@@ -26,6 +26,7 @@ import './theme/variables.css';
 import { useState, useEffect } from 'react';
 import api from './services/api';
 import Dashboard from './pages/Dashboard';
+import Pedidos from './pages/Pedidos'
 
 const App: React.FC = () => {
   const [firstName, setFirstName] = useState('');
@@ -47,13 +48,16 @@ const App: React.FC = () => {
           <Menu email={userEmail} firstName={firstName}/>
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
-              <Page />
+              <Redirect to="/login"/>
             </Route>
             <Route path="/login" exact>
               <Login />
             </Route>
             <Route path="/dashboard">
               <Dashboard />
+            </Route>
+            <Route path="/pedidos" exact>
+              <Pedidos />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
