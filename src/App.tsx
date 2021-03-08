@@ -27,6 +27,7 @@ import { useState, useEffect } from 'react';
 import api from './services/api';
 import Dashboard from './pages/Dashboard';
 import Pedidos from './pages/Pedidos'
+import PedidosUm from './pages/Pedidos-1';
 
 const App: React.FC = () => {
   const [firstName, setFirstName] = useState('');
@@ -58,6 +59,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/pedidos" exact>
               <Pedidos />
+            </Route>
+            <Route path="/pedidos/1" >
+              <PedidosUm/>
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

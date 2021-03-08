@@ -10,7 +10,6 @@ import {
   IonRow,
   IonCol,
   IonList,
-  IonLabel,
   IonItem,
   IonText
 } from "@ionic/react"
@@ -38,9 +37,9 @@ const Pedidos: React.FC = () => {
           <IonRow>
             <IonCol>
               <IonList>
-                <IonItem>
+                <IonItem href='/pedidos/1'>
                   <IonText>
-                    Pedido No 20666 - OBRA - 331 - DUPLICAÇÃO RODOVIA BR280 SC - 02/03/2021
+                    Pedido No 20666 - OBRA - 331 - DUPLICAÇÃO RODOVIA BR280 SC
                   </IonText>
                 </IonItem>
               </IonList>
